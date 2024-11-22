@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentColor"
+    android:id="@+id/background">
+
+
+    <View
+        android:id="@+id/crossView"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/cross_final"
+        android:backgroundTint="@color/black"/>
+
+    <ImageView
+        android:padding="10dp"
+        android:id="@+id/circleNote"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/textNbrColor1"
+        app:layout_constraintStart_toStartOf="@id/textNbrColor1"
+        app:layout_constraintEnd_toEndOf="@id/textNbrColor1"
+        app:layout_constraintBottom_toBottomOf="@id/textNbrColor1"
+        android:background="@drawable/circle"
+        app:layout_constraintDimensionRatio="1:1"
+        android:backgroundTint="@color/black"
+        >
+
+    </ImageView>
+
+
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:padding="35dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/textNbrColor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="10"
+        android:textColor="@color/white"/>
+-
+    <TextView
+        android:paddingEnd="3dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/textNbrColor1"
+        app:layout_constraintTop_toTopOf="@id/textNbrColor1"
+        app:layout_constraintEnd_toEndOf="@id/circleNote"
+        android:id="@+id/textNbrColor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text=" /10"
+        android:textColor="@color/white"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/guideline33"
+        app:layout_constraintEnd_toEndOf="@id/guideline66"
+        app:layout_constraintTop_toBottomOf="@id/guidelineLayout"
+        android:gravity="center"
+        >
+
+
+
+        <TextView
+            android:id="@+id/textRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/redSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/red"
+            app:trackColorActive="@color/red"
+            />
+
+
+        <TextView
+            android:id="@+id/textGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/greenSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/green"
+            app:trackColorActive="@color/green"
+            />
+
+        <TextView
+            android:id="@+id/textBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/blueSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/blue"
+            app:trackColorActive="@color/blue"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        app:layout_constraintTop_toTopOf="@id/layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="25dp"
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Submit"
+        android:backgroundTint="@color/black"
+        android:textSize="20sp"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/exTextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
+        android:text="Guess the Color Mix"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

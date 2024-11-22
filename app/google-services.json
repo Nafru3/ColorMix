@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1005427192295",
+    "project_id": "colormix-eefdb",
+    "storage_bucket": "colormix-eefdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005427192295:android:c9bc024427431fed7c0d42",
+        "android_client_info": {
+          "package_name": "com.nafru.ColorMix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_lo3mdDBCLx00juDlxEiDx7g1xns2dCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005427192295:android:62980580abf666fc7c0d42",
+        "android_client_info": {
+          "package_name": "com.nafrugame.choosecolor"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_lo3mdDBCLx00juDlxEiDx7g1xns2dCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

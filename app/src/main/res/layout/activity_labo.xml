@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaboActivity"
+    android:id="@+id/background"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/exTextLabo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Make your own Color Mix"/>
+
+
+    <TextView
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/textRedLabo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/redLaboSlider"
+        app:layout_constraintStart_toStartOf="@id/redLaboSlider"
+        app:layout_constraintEnd_toEndOf="@id/redLaboSlider"
+        android:text="Red"
+        />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textGreenLabo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/redLaboSlider"
+        app:layout_constraintStart_toStartOf="@id/greenLaboSlider"
+        app:layout_constraintEnd_toEndOf="@id/greenLaboSlider"
+        android:text="Green"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textBlueLabo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/redLaboSlider"
+        app:layout_constraintStart_toStartOf="@id/blueLaboSlider"
+        app:layout_constraintEnd_toEndOf="@id/blueLaboSlider"
+        android:text="Blue"
+        android:textColor="@color/white"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/redLaboSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/laboMenuButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/greenLaboSlider"
+        android:paddingEnd="8dp"
+        app:labelBehavior="gone"
+        app:thumbColor="@color/red"
+        app:trackColorActive="@color/red"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/greenLaboSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/redLaboSlider"
+        app:layout_constraintBottom_toBottomOf="@id/redLaboSlider"
+        app:layout_constraintStart_toEndOf="@id/redLaboSlider"
+        app:layout_constraintEnd_toStartOf="@id/blueLaboSlider"
+        android:paddingEnd="8dp"
+        android:theme="@style/Widget.MaterialComponents.Slider"
+        app:labelBehavior="gone"
+        app:thumbColor="@color/green"
+        app:trackColorActive="@color/green"
+        />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/blueLaboSlider"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/redLaboSlider"
+        app:layout_constraintBottom_toBottomOf="@id/redLaboSlider"
+        app:layout_constraintStart_toEndOf="@id/greenLaboSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingStart="8dp"
+        android:theme="@style/Widget.MaterialComponents.Slider"
+        app:labelBehavior="gone"
+        app:thumbColor="@color/blue"
+        app:trackColorActive="@color/blue"
+        />
+
+    <Button
+        android:id="@+id/laboMenuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Menu"
+        android:onClick="goToMenu"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="12dp"/>
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

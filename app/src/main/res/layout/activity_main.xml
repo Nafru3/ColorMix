@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <View
+        android:id="@+id/square1"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="52"
+        />
+
+    <View
+        android:id="@+id/square2"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/laboButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/square"
+        android:rotation="-55"
+        />
+
+
+    <View
+        android:id="@+id/square3"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/laboButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="35"
+        />
+    <View
+        android:id="@+id/square4"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/classicButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="25"
+        />
+
+    <View
+        android:id="@+id/square5"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/laboButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="-81"
+        />
+
+
+<!--
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/classicButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="C O L O R \n    M I X"
+        android:textSize="40sp"
+        android:textColor="@color/white"/>-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/line75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <ImageView
+        android:id="@+id/textTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/line25"
+        app:layout_constraintEnd_toEndOf="@id/line75"
+        app:layout_constraintBottom_toTopOf="@id/classicButton"
+        android:src="@drawable/img_1" />
+
+
+    <Button
+        android:layout_marginBottom="12dp"
+        android:id="@+id/classicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/infiniButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="    Classic Game    "
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginBottom="12dp"
+        android:id="@+id/infiniButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="    Endless Game    "
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginVertical="12dp"
+        android:id="@+id/leaderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/infiniButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tutoButton"
+        android:text="   LeaderBoard  "
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginBottom="12dp"
+        android:id="@+id/tutoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/leaderButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/laboButton"
+        android:text="   How To Play  "
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_marginTop="12dp"
+        android:id="@+id/laboButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tutoButton"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="    Labo    "
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/madeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:text="Made by Nafru"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,109 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LeaderboardActivity"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.13"
+        android:orientation="horizontal"/>
+
+    <ImageView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/textLeaderboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/img_6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/Guideline13" />
+
+
+
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textLeaderboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:singleSelection="true"
+        android:id="@+id/toggleButton"
+        app:selectionRequired="true"
+        app:checkedButton="@id/bestScoreButton"
+        >
+
+        <Button
+            android:id="@+id/bestScoreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Score"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/bestAverageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Average"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:id="@+id/bestSerieButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Serie"
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <ListView
+        android:id="@+id/listViewLeaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:dividerHeight="10dp"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/menuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButton" />
+
+    <Button
+        android:layout_marginTop="12dp"
+        android:id="@+id/menuButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:onClick="goToMenu"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="12dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

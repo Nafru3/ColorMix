@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutoActivity"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTextEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline85"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20"/>
+
+
+    <View
+        android:layout_marginBottom="20dp"
+        android:id="@+id/square22"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/descText2"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextStart"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="60"
+        />
+
+    <View
+        android:layout_marginBottom="-20dp"
+        android:id="@+id/square20"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/descText4"
+        app:layout_constraintBottom_toTopOf="@id/menuTutoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/square"
+        android:rotation="-80"
+        />
+
+    <View
+        android:layout_marginBottom="-20dp"
+        android:id="@+id/square21"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/descText4"
+        app:layout_constraintBottom_toTopOf="@id/menuTutoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextEnd"
+        android:background="@drawable/square"
+        android:rotation="50"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/tutoImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/Guideline20"
+        android:src="@drawable/img_4"/>
+
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You'll have three sliders representing the amounts of Red, Blue and Green in the color"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextEnd"
+        app:layout_constraintTop_toBottomOf="@id/tutoImage"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@id/guideline15"
+        app:layout_constraintEnd_toEndOf="@id/guideline85"
+        app:layout_constraintTop_toBottomOf="@id/descText"
+        android:gravity="center"
+        >
+
+
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:id="@+id/textRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/redSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/red"
+            app:trackColorActive="@color/red"
+            />
+
+
+        <TextView
+            android:id="@+id/textGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <com.google.android.material.slider.Slider
+            android:id="@+id/greenSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/green"
+            app:trackColorActive="@color/green"
+            />
+
+        <TextView
+            android:id="@+id/textBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/blueSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:labelBehavior="gone"
+            app:thumbColor="@color/blue"
+            app:trackColorActive="@color/blue"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/descText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Guess the proportion of Red, Green and Blue in the background color \nThere is two game modes :"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextEnd"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/descText3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Classic Mode : Have the best average in 10 games"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextEnd"
+        app:layout_constraintTop_toBottomOf="@id/descText2"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/descText4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Endless Mode : Maintain a score above 80% to keep playing"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:justificationMode="inter_word"
+        app:layout_constraintStart_toStartOf="@id/guidelineTextStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineTextEnd"
+        app:layout_constraintTop_toBottomOf="@id/descText3"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/menuTutoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="Menu"
+        android:onClick="goToMenu"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"
+        android:textSize="20sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

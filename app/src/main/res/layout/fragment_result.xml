@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentResult">
+
+    <!-- Partie supérieure de l'écran -->
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Guideline75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"/>
+
+    <View
+        android:id="@+id/guessRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/triangle1"
+        android:background="#3498db"
+
+        />
+
+    <!-- Triangle -->
+
+    <!-- Partie inférieure de l'écran -->
+    <!--
+    <View
+        android:id="@+id/triangle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/triangle"
+        app:layout_constraintBottom_toTopOf="@id/correctRectangle"
+        app:layout_constraintTop_toBottomOf="@id/guessRectangle"
+        tools:layout_editor_absoluteX="-139dp" />-->
+
+    <View
+        android:id="@+id/triangle1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/trianglefinal"
+        app:layout_constraintBottom_toTopOf="@id/correctRectangle"
+        app:layout_constraintTop_toBottomOf="@id/guessRectangle"
+         />
+
+    <View
+        android:id="@+id/crossView"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/cross_final"
+        android:backgroundTint="@color/black"/>
+    <!--Trait entre les 2 : -->
+
+
+
+    <View
+        android:id="@+id/triangle2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/trianglefinal"
+        app:layout_constraintBottom_toTopOf="@id/correctRectangle"
+        app:layout_constraintTop_toBottomOf="@id/guessRectangle"
+        android:rotation="180"
+        android:backgroundTint="#3498db"/>
+
+
+
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/triangle1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/correctRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"/>
+
+
+    <View
+        android:id="@+id/trait"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/square"
+        android:backgroundTint="@color/black"
+        android:rotation="-76"/>
+
+    <TextView
+        android:id="@+id/textResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textResults"
+        app:layout_constraintBottom_toTopOf="@id/circle"
+        app:layout_constraintStart_toStartOf="@id/Guideline25"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/Guideline75">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/textGuess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textResults"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Your guess"
+            android:textColor="@color/black"/>
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderGuessRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbColor="@color/red"
+            app:trackColorActive="@color/darkRed"
+            android:enabled="false"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderGuessGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbColor="@color/green"
+            app:trackColorActive="@color/darkGreen"
+            android:enabled="false"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderGuessBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             app:thumbColor="@color/blue"
+            app:trackColorActive="@color/darkBlue"
+            android:enabled="false"
+            />
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <View
+        android:layout_width="90dp"
+        android:id="@+id/circle"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/circle"
+
+        />
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/textNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="100.0%"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+
+        />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Guideline25"
+        app:layout_constraintEnd_toEndOf="@id/Guideline75"
+        app:layout_constraintTop_toBottomOf="@id/circle"
+        app:layout_constraintBottom_toTopOf="@id/nextButton"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/textAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The answer"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderResponseRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbColor="@color/red"
+            app:trackColorActive="@color/darkRed"
+            android:enabled="false"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderResponseGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbColor="@color/green"
+            app:trackColorActive="@color/darkGreen"
+            android:enabled="false"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/sliderResponseBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:thumbColor="@color/blue"
+            app:trackColorActive="@color/darkBlue"
+            android:enabled="false"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        android:textSize="20sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

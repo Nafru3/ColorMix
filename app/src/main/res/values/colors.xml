@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="darkRed">#780000</color>
+    <color name="darkGreen">#FF007800</color>
+    <color name="darkBlue">#FF000078</color>
+    <color name="or">#F8E328</color>
+    <color name="silver">#8C8C8C</color>
+    <color name="bronze">#874925</color>
+</resources>
