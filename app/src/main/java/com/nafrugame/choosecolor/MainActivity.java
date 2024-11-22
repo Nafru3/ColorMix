@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity { //Rajouter croix pour quit
         howToPlayButton.setOnClickListener(listenerTuto);
         leaderButton.setOnClickListener(listenerLeader);
 
-
+        // Test commit
 
 
 
